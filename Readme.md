@@ -46,4 +46,4 @@ px.bar(dataframe, x="method", y="accuracy", facet_col="chromosome")
 
 .. which generates this plot:
 
-![example.png]()
+![example](example.png)
