@@ -4,7 +4,7 @@
 
 from setuptools import setup, find_packages
 
-requirements = ['typer', ]
+requirements = ['typer', "pandas", "numpy" ]
 
 test_requirements = ['pytest>=3', "hypothesis"]
 
