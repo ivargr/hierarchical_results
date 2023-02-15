@@ -22,7 +22,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description=" ",
+    description="Hierarchical results",
     entry_points={
         'console_scripts': [
             'hierarchical_results=hierarchical_results.cli:main',
@@ -30,6 +30,7 @@ setup(
     },
     install_requires=requirements,
     license="MIT license",
+    long_description="Hierarchical results",
     include_package_data=True,
     keywords='hierarchical_results',
     name='hierarchical_results',
@@ -37,6 +38,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/ivargr/hierarchical_results',
-    version='0.0.3',
+    version='0.0.2',
     zip_safe=False,
 )
