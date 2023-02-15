@@ -30,7 +30,6 @@ setup(
     },
     install_requires=requirements,
     license="MIT license",
-    long_description="",
     include_package_data=True,
     keywords='hierarchical_results',
     name='hierarchical_results',
