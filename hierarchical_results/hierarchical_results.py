@@ -92,3 +92,11 @@ class HierarchicalResults:
         to_file(result_value, self._get_result_path(parameters, result_name))
         #with open(self._get_result_path(parameters, result_name), "w") as f:
         #    f.write(str(result_value) + "\n")
+
+
+    def get_sublogger(self, fixed_parameter_values: List[str]):
+        """
+        Returns a sublogger where the first n parameter values are fixed.
+        Using this sublogger, you only need to specify the reminding parameters.
+        """
+        raise NotImplementedError
