@@ -2,7 +2,7 @@
 
 __author__ = """Ivar Grytten"""
 __email__ = 'ivargry@ifi.uio.no'
-__version__ = '0.0.5'
+__version__ = '0.0.6'
 
 
 from .hierarchical_results import HierarchicalResults, ParameterCombinations
