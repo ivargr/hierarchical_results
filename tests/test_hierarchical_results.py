@@ -40,8 +40,12 @@ def test_results_as_dataframe(hr):
 
 
 def test_get_result_file_names(hr):
-    parameter_combinations = ParameterCombinations(hr._parameter_names, ["asdf", [1, 2, 3], "test", "test"])
+    parameter_combinations = ParameterCombinations(hr._parameter_names, ["asdf", [0, 2, 3], "test", "test"])
     parameter_combinations.set("d", ["one", "two"])
     file_names = hr.get_result_file_names(parameter_combinations, ["result1", "result2"])
     print(file_names)
     assert len(file_names) == 12
+
+
+def test_array_result(hr):
+    pass

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import logging
 import pandas as pd
-
+from shared_memory_wrapper import from_file, to_file
 
 class ParameterCombinations:
     def __init__(self, names: List[str], values: List):
@@ -49,8 +49,9 @@ class HierarchicalResults:
     def get_result(self, parameters: List[str], result: str):
         assert len(parameters) <= len(self._parameter_names), "Got more parameters %d than in hieararchy %d" % (len(parameters), len(self._parameter_names))
         file_name = self._get_result_path(parameters, result)
-        with open(file_name) as f:
-            return float(f.read().strip())
+        return from_file(file_name)
+        #with open(file_name) as f:
+        #    return float(f.read().strip())
 
     def get_result_file_names(self, parameters: ParameterCombinations, result_names):
         file_names = []
@@ -88,5 +89,6 @@ class HierarchicalResults:
         path = self._get_parameter_path(parameters)
         logging.info("Storing to path %s" % path)
         Path(path).mkdir(parents=True, exist_ok=True)
-        with open(self._get_result_path(parameters, result_name), "w") as f:
-            f.write(str(result_value) + "\n")
+        to_file(result_value, self._get_result_path(parameters, result_name))
+        #with open(self._get_result_path(parameters, result_name), "w") as f:
+        #    f.write(str(result_value) + "\n")

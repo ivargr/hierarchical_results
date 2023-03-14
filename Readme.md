@@ -46,4 +46,12 @@ px.bar(dataframe, x="method", y="accuracy", facet_col="chromosome")
 
 .. which generates this plot:
 
+The HierarchicalResults object can be thought of as a configuration for a "logger". This object can be saved to file. A typical scenario would be to store results while running stuff, then initiating the same object later to gather results and present them.
+
+```python
+from shared_memory_wrapper import to_file, from_file
+to_file("my_logger", hr)
+hr2 = from_file("my_logger")
+```
+
 ![example](example.png)

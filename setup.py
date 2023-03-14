@@ -4,7 +4,7 @@
 
 from setuptools import setup, find_packages
 
-requirements = ["numpy", "pandas", ]
+requirements = ["numpy", "pandas", "shared_memory_wrapper"]
 
 test_requirements = ['pytest>=3', "hypothesis"]
 

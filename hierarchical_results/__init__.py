@@ -6,3 +6,4 @@ __version__ = '0.0.4'
 
 
 from .hierarchical_results import HierarchicalResults, ParameterCombinations
+from .logging import init_logger, get_logger
